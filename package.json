@@ -1,0 +1,17 @@
+{
+  "name": "zenn-ryusou",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx zenn preview",
+    "article": "npx zenn new:article",
+    "book": "npx zenn new:book"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "zenn-cli": "^0.1.34"
+  }
+}
