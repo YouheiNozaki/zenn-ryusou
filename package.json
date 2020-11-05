@@ -6,12 +6,13 @@
   "scripts": {
     "start": "npx zenn preview",
     "article": "npx zenn new:article",
-    "book": "npx zenn new:book"
+    "book": "npx zenn new:book",
+    "preview": "npx zenn preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "zenn-cli": "^0.1.34"
+    "zenn-cli": "^0.1.52"
   }
 }
