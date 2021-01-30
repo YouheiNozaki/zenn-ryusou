@@ -3,7 +3,7 @@ title: "VuejsとTypeScriptで快適にコーティングをするTips"
 emoji: "✌️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Vuejs","TypeScript"]
-published: true
+published: false
 ---
 
 こんにちは。
@@ -39,7 +39,7 @@ https://github.com/vuejs/vetur
 # 配列の型
 言わずもがなですが、要素の追加など配列の操作でアプリケーションの機能を作成する場面は多々あると思います。
 Vue.jsにおいても配列にいれる値に型をつけてコーティングをしたいですね。
-そんな時にはvue.jsに内包されているPropTypesを使用します。
+そんな時にはvue.jsに内包されている`PropTypes`を使用します。
 
 例としてUserを配列に追加するケースをあげてみます。
 
