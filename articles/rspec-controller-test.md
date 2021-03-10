@@ -3,7 +3,7 @@ title: "「EverydayRails」のcontrollersのテストをrequest specで書き換
 emoji: "😎"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Rails", "Rspec"]
-published: false
+published: true
 ---
 
 Railsに最近入門中のりゅーそうです。
@@ -171,7 +171,6 @@ end
 
 パスにparamsを追加することによって、projects/:project_idのパスを設定します。
 Factorybotの値をハッシュとして渡す場合にはFactoryBot.attributes_forを使用します。
-参考：https://qiita.com/__kotaro_/items/adbc355bfb550b8b2150
 
 ```ruby
 RSpec.describe "Projects", type: :request do
@@ -222,7 +221,7 @@ https://github.com/YouheiNozaki/Everyday-rails-v6/blob/main/spec/requests/projec
 今回のポイントは
 `responds with JSON formatted output`のテストです。
 このtaskをPOSTするメソッドはURLが
-`/projects/:project_id/tasks(.:format)`というように重曹になっているので、これをパスに設定する必要があります。
+`/projects/:project_id/tasks(.:format)`というようにネストしたURLになっているので、これをパスに設定する必要があります。
 ここでは、
       `post project_tasks_url(@project), headers: headers, params: { task: new_task }`
 というように設定します。POSTメソッドのheadersには先ほどletメソッドで設定した値を追加します。
@@ -266,3 +265,6 @@ https://github.com/everydayrails/everydayrails-rspec-2017/issues/112
 また、今回実装にあたって伊藤さん(https://twitter.com/jnchito)には細かい実装の方法やドキュメントの紹介まで詳しく教えていただきました。
 改めてお礼申し上げます。
 
+ぜひ、本書でRspecを学ぶ時にはRequest specで書き換える練習をしてどちらでもテストを実装出来るようにしてみてください！その時の参考になれば幸いです。
+
+[EverydayRails -RspecによるRailsテスト入門-](https://leanpub.com/everydayrailsrspec-jp)
