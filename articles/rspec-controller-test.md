@@ -132,7 +132,7 @@ RSpec.describe "Homes", type: :request do
 end
 ```
 
-# 基本的なテスト
+# Projectsをテストする
 request specでAPIのテストを行っていきます。
 まずはproject_request_spec.rbのテストです。
 
@@ -204,4 +204,65 @@ RSpec.describe "Projects", type: :request do
 end
 ```
 ## PUT DELETE
-Request spec特有の実装は見られないので省略
+Request spec特有の実装は見られないので省略。
+全容はこちらをご覧ください。
+https://github.com/YouheiNozaki/Everyday-rails-v6/blob/main/spec/requests/projects_request_spec.rb
+
+# Projects/taskをテストする
+最後にtasks_request_spec.rbをテストします。
+ここではJSON形式でAPIがレスポンスを返すかをテストしています。
+このJSONなどのFormatをテストする場合にはletを使用して値を設定します。
+ここではresponseのheaderをapplication/jsonに設定します。
+```ruby
+  let(:headers) do
+    { 'Accept' => 'application/json' }
+  end
+```
+全容は以下のようになります。
+今回のポイントは
+`responds with JSON formatted output`のテストです。
+このtaskをPOSTするメソッドはURLが
+`/projects/:project_id/tasks(.:format)`というように重曹になっているので、これをパスに設定する必要があります。
+ここでは、
+      `post project_tasks_url(@project), headers: headers, params: { task: new_task }`
+というように設定します。POSTメソッドのheadersには先ほどletメソッドで設定した値を追加します。
+```ruby
+require 'rails_helper'
+
+RSpec.describe "Tasks", type: :request do
+  let(:headers) do
+    { 'Accept' => 'application/json' }
+  end
+  before do
+    @user = FactoryBot.create(:user)
+    @project = FactoryBot.create(:project, owner: @user)
+    @task = @project.tasks.create!(name: "Test task")
+  end
+
+  describe "#show" do
+    #JSON形式でレスポンスを返すこと
+    it "responds with JSON formatted output" do
+      sign_in @user
+      get projects_url, headers: headers, params: { project_id: @project.id, id: @task.id }
+      expect(response.content_type).to eq "application/json"
+    end
+  end
+  describe "#create" do
+    #JSON形式でレスポンスを返すこと
+    it "responds with JSON formatted output" do
+      new_task = { name: "New test task" }
+      sign_in @user
+      post project_tasks_url(@project), headers: headers, params: { task: new_task }
+      expect(response.content_type).to eq "application/json"
+    end
+  end
+end
+```
+# 最後に
+今回、ControllerのテストをRequest specに書き換えたことで、アプリケーションの不具合が発見されたとのことで取り組んで良かったと思います。
+https://github.com/everydayrails/everydayrails-rspec-2017/issues/112
+(issueを伊藤さんが作成してくださいました)
+
+また、今回実装にあたって伊藤さん(https://twitter.com/jnchito)には細かい実装の方法やドキュメントの紹介まで詳しく教えていただきました。
+改めてお礼申し上げます。
+
