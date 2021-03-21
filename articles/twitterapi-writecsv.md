@@ -87,8 +87,8 @@ async function searchTweet(count) {
       console.error(error)
       return error
     }
-    for (item in searchData.statuses) {
-      const tweet = searchData.statuses[item];
+    searchData.statuses.map(item => {
+      const tweet = item;
       data.push({
         id: tweet.id,
         name: tweet.user.name,
@@ -99,7 +99,7 @@ async function searchTweet(count) {
         favorite_count: tweet.favorite_count,
         retweet_count: tweet.retweet_count
       })
-    }
+    })
   })
 }
 
@@ -161,8 +161,8 @@ async function searchTweet(count) {
       console.error(error)
       return error
     }
-    for (item in searchData.statuses) {
-      const tweet = searchData.statuses[item];
+   searchData.statuses.map(item => {
+      const tweet = item;
       data.push({
         id: tweet.id,
         name: tweet.user.name,
@@ -173,7 +173,7 @@ async function searchTweet(count) {
         favorite_count: tweet.favorite_count,
         retweet_count: tweet.retweet_count
       })
-    }
+    })
     // CSVに出力
     csvWriter
       .writeRecords(data)
