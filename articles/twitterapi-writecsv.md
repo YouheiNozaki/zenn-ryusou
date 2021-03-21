@@ -115,7 +115,7 @@ searchTweet(100)
 
 ## CSVにデータを追加
 
-今回はCSVにデータを書き込むためにcsv-writerを使用しました。
+今回はCSVにデータを書き込むためにcsv-writerというライブラリを使用しました。
 https://www.npmjs.com/package/csv-writer
 
 実装は以下のようになります。
@@ -195,8 +195,17 @@ ID,Name,Screenname,Image,Created_at,Text,favorite_count,retweet_count
 <!-- 以下省略 100件取得される -->
 ```
 
-## まとめ
+# まとめ
 実際にチーム開発を行うのは実は初めてでした。
 単純な実装でしたが、要件などをチームで確認したりしながらする開発は楽しかったです。
 
 今後もツールの改善・開発を進めていきたいと思います。
+
+# 参考記事
+https://gist.github.com/cucmberium/e687e88565b6a9ca7039
+https://github.com/desmondmorris/node-twitter
+https://dev.classmethod.jp/articles/twitter-api-approved-way/
+https://github.com/desmondmorris/node-twitter/tree/master/examples#search
+https://developer.twitter.com/en/docs/twitter-api/v1/tweets/search/api-reference/get-search-tweets
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+https://www.npmjs.com/package/csv-writer
