@@ -7,7 +7,7 @@ published: false
 ---
 
 こんにちは。りゅーそう()です。
-ご縁があり、PARKLoT(https://id.park-lot.com/)さんのサービス開発のお手伝いをさせていただいています。
+ご縁があり、[PARKLoT](https://id.park-lot.com/)さんのサービス開発のお手伝いをさせていただいています。
 TwitterAPIを使って関数を書く機会がありましたので、そこで得た知見や実装に至ったプロセスを紹介したいと思います。
 
 # 作成したもの
@@ -65,7 +65,7 @@ const client = new Twitter({
 ##　データを追加
 配列に取得したデータを追加します。
 以下のページを参考に実装を進めました。
-https://github.com/desmondmorris/node-twitter/tree/master/examples#search
+https://github.com/desmondmorris/node-twitter/tree/master/examples#search  
 https://developer.twitter.com/en/docs/twitter-api/v1/tweets/search/api-reference/get-search-tweets
 
 client.getでツイートを取得します。
@@ -110,12 +110,12 @@ searchTweet(100)
 なので`tweet_mode: 'extended'`を設定して、`full_text`を取得します。
 
 また、full_textには改行が含まれてしまい、データをCSVなどに入れる際に整合性が取れなくなってしまいます。
-ここでは、`tweet.full_text.replace(/\r?\n/g, "")`のように実装することで改行コードをなくしています。
+ここでは、`tweet.full_text.replace(/\r?\n/g, "")`のように実装することで改行コードをなくしています。  
 参考: https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 
 ## CSVにデータを追加
 
-今回はCSVにデータを書き込むためにcsv-writerというライブラリを使用しました。
+今回はCSVにデータを書き込むためにcsv-writerというライブラリを使用しました。  
 https://www.npmjs.com/package/csv-writer
 
 実装は以下のようになります。
@@ -202,10 +202,10 @@ ID,Name,Screenname,Image,Created_at,Text,favorite_count,retweet_count
 今後もツールの改善・開発を進めていきたいと思います。
 
 # 参考記事
-https://gist.github.com/cucmberium/e687e88565b6a9ca7039
-https://github.com/desmondmorris/node-twitter
-https://dev.classmethod.jp/articles/twitter-api-approved-way/
-https://github.com/desmondmorris/node-twitter/tree/master/examples#search
-https://developer.twitter.com/en/docs/twitter-api/v1/tweets/search/api-reference/get-search-tweets
-https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace
-https://www.npmjs.com/package/csv-writer
+https://gist.github.com/cucmberium/e687e88565b6a9ca7039  
+https://github.com/desmondmorris/node-twitter  
+https://dev.classmethod.jp/articles/twitter-api-approved-way/  
+https://github.com/desmondmorris/node-twitter/tree/master/examples#search  
+https://developer.twitter.com/en/docs/twitter-api/v1/tweets/search/api-reference/get-search-tweets  
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace  
+https://www.npmjs.com/package/csv-writer  
