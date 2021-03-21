@@ -64,7 +64,7 @@ const client = new Twitter({
 })
 ```
 
-##　データを追加
+## データを追加
 配列に取得したデータを追加します。
 以下のページを参考に実装を進めました。
 https://github.com/desmondmorris/node-twitter/tree/master/examples#search  
