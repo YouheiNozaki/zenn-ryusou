@@ -2,13 +2,15 @@
 title: "TwitterAPIのデータをCSVに出力する"
 emoji: "😺"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["Node.js", "TwitterAPI"]
+topics: ["Nodejs", "TwitterAPI"]
 published: false
 ---
 
 こんにちは。[りゅーそう](https://twitter.com/ryusou_mtkh)です。
 ご縁があり、[PARKLoT](https://id.park-lot.com/)さんのサービス開発のお手伝いをさせていただいています。
 TwitterAPIを使って関数を書く機会がありましたので、そこで得た知見や実装に至ったプロセスを紹介したいと思います。
+
+https://id.park-lot.com/
 
 # 作成したもの
 
@@ -200,6 +202,10 @@ ID,Name,Screenname,Image,Created_at,Text,favorite_count,retweet_count
 単純な実装でしたが、要件などをチームで確認したりしながらする開発は楽しかったです。
 
 今後もツールの改善・開発を進めていきたいと思います。
+
+ParkLot(パークロット)
+https://id.park-lot.com/
+
 
 # 参考記事
 https://gist.github.com/cucmberium/e687e88565b6a9ca7039  
