@@ -6,7 +6,7 @@ topics: ["Node.js", "TwitterAPI"]
 published: false
 ---
 
-こんにちは。りゅーそう()です。
+こんにちは。[りゅーそう](https://twitter.com/ryusou_mtkh)です。
 ご縁があり、[PARKLoT](https://id.park-lot.com/)さんのサービス開発のお手伝いをさせていただいています。
 TwitterAPIを使って関数を書く機会がありましたので、そこで得た知見や実装に至ったプロセスを紹介したいと思います。
 
