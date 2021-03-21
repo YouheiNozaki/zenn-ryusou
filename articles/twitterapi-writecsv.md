@@ -87,7 +87,7 @@ async function searchTweet(count) {
       console.error(error)
       return error
     }
-    searchData.statuses.map(item => {
+    searchData.statuses.forEach(item => {
       const tweet = item;
       data.push({
         id: tweet.id,
@@ -161,7 +161,7 @@ async function searchTweet(count) {
       console.error(error)
       return error
     }
-   searchData.statuses.map(item => {
+   searchData.statuses.forEach(item => {
       const tweet = item;
       data.push({
         id: tweet.id,
