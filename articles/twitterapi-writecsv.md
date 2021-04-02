@@ -200,6 +200,8 @@ ID,Name,Screenname,Image,Created_at,Text,favorite_count,retweet_count
 単純な実装でしたが、要件などをチームで確認したりしながらする開発は楽しかったです。
 
 今後もツールの改善・開発を進めていきたいと思います。
+追記：続編を書いたので、こちらもぜひ
+https://zenn.dev/ryusou/articles/twitterapi-writecsv
 
 ParkLot(パークロット)
 https://id.park-lot.com/
