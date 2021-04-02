@@ -201,7 +201,7 @@ ID,Name,Screenname,Image,Created_at,Text,favorite_count,retweet_count
 
 今後もツールの改善・開発を進めていきたいと思います。
 追記：続編を書いたので、こちらもぜひ
-https://zenn.dev/ryusou/articles/twitterapi-writecsv
+https://zenn.dev/ryusou/articles/javascript-twitterapi
 
 ParkLot(パークロット)
 https://id.park-lot.com/
