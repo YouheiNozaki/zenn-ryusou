@@ -839,4 +839,6 @@ vue-chartjsを使用すれば、vueでも簡単に良い感じのグラフを作
 https://id.park-lot.com/
 
 # PR
-現在、7~9月に向けて転職活動中です。面接等してくださる会社様、TwitterのDMにてご連絡お待ちしております。
+現在、7~9月に向けて転職活動中です。面接等してくださる会社様、TwitterのDMまでご連絡お待ちしております。
+
+https://twitter.com/ryusou_mtkh
