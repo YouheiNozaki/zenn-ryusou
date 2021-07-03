@@ -241,6 +241,7 @@ https://alephjs.org/docs/basic-features/built-in-css-support
 ## デプロイ
 デプロイはVerselを使用します。基本的にはドキュメント通りでデプロイできるはずです。
 - Buildコマンドのaleph.jsのバージョンを合わせること
+- Output Dirをdistにすること
 - VerselのEnvironment Variablesに`X_API_KEY`を設定することを忘れないようにしてください。
 
 Git連携すると簡単にデプロイできると思います。
