@@ -50,7 +50,7 @@ https://esm.sh/
 
 ## セットアップ
 では、実際にAleph.jsとmicroCMSを用いて開発をする方法を紹介します。
-今回デプロイはVerselを利用します。
+今回デプロイはVercelを利用します。
 
 brewなどを用いて環境にDenoをインストールしてください。
 https://deno.land/#installation
@@ -95,7 +95,7 @@ https://github.com/YouheiNozaki/microcms-aleph
 ```
 project
  - .vscode(vscodeの設定ファイル)
- - dist(build時に作成されるファイル.Verselではこのファイルを実行する)
+ - dist(build時に作成されるファイル.Vercelではこのファイルを実行する)
  - components(コンポーネントのファイル)
  - lib(関数とか)
  - pages(Next.jsのFile Systemと同じくこのファイルがルーティングになる)
@@ -239,10 +239,10 @@ https://alephjs.org/docs/basic-features/built-in-css-support
 
 
 ## デプロイ
-デプロイはVerselを使用します。基本的にはドキュメント通りでデプロイできるはずです。
+デプロイはVercelを使用します。基本的にはドキュメント通りでデプロイできるはずです。
 - Buildコマンドのaleph.jsのバージョンを合わせること
 - Output Dirをdistにすること
-- VerselのEnvironment Variablesに`X_API_KEY`を設定することを忘れないようにしてください。
+- VercelのEnvironment Variablesに`X_API_KEY`を設定することを忘れないようにしてください。
 
 Git連携すると簡単にデプロイできると思います。
 
