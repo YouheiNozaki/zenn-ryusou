@@ -260,6 +260,10 @@ https://microcms.io/
 やっぱり欲しいですよね。Denoでは`deno fmt`でformatすることが出来ます。とても速いです。
 VSCodeの拡張があると嬉しいです。
 
+追記：設定すれば使えるそうです。
+[numb_86](https://zenn.dev/numb_86)さんコメントありがとうございます。
+https://zenn.dev/ryusou/articles/alephjs-microcms#comment-66085d7787c6a8
+
 ## linter
 自分は使用していませんが、独自にLinerがあるそうです。
 https://zenn.dev/magurotuna/articles/66618f26475702
